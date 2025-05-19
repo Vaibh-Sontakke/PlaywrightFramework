@@ -26,8 +26,10 @@ module.exports = defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
  reporter: [
   ['line'],
-  ['allure-playwright', { resultsDir: process.env.RESULTS_DIR || 'allure-results' }]
+  ['allure-playwright', { resultsDir: 'allure-results' }]
 ],
+
+globalTeardown:'./globalTeardown.js',
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
